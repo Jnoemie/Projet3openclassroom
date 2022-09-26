@@ -75,6 +75,7 @@ img{
     background-color: #ededed;
     height: 300px;
     opacity: 0.3;
+    margin:0;
 }
 #form{
     display:flex;
@@ -193,5 +194,9 @@ a
 } 
 section {
     margin:20px 0;
+}
+#form i 
+{
+    padding: 0 15px;
 }
 }

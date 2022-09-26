@@ -1,3 +1,24 @@
+@font-face{
+    font-family: "roboto";
+    src:url(font/Roboto/Roboto-Black.ttf);
+    src:url(font/Roboto/Roboto-BlackItalic.ttf);
+    src:url(font/Roboto/Roboto-Bold.ttf);
+    src:url(font/Roboto/Roboto-BoldItalic.ttf);
+    src:url(font/Roboto/Roboto-Italic.ttf);
+    src:url(font/Roboto/Roboto-Light.ttf);
+    src:url(font/Roboto/Roboto-LightItalic.ttf);
+    src:url(font/Roboto/Roboto-Medium.ttf);
+    src:url(font/Roboto/Roboto-MediumItalic.ttf);
+    src:url(font/Roboto/Roboto-Regular.ttf);
+    src:url(font/Roboto/Roboto-Thin.ttf);
+    src:url(font/Roboto/Roboto-ThinItalic.ttf);
+}
+@font-face{
+    font-family: "shrikhand";
+    src:url(font/Shrikhand/Shrikhand-Regular.ttf)
+}
+
+
 *
 { 
     box-sizing: border-box;
@@ -24,6 +45,7 @@ img{
 body {
     width: 90%;
     margin: 0 auto;
+    font-family: "roboto",Arial, Helvetica, sans-serif;
 }
 header 
 {
@@ -62,11 +84,13 @@ img{
 {
 text-align: center;
 opacity: 1;
+
 }
 #hight h2
 {
     margin-top:32px;
     margin-bottom: 0;
+    font-family: "shrikhand",Arial, Helvetica, sans-serif;
 
 }
 #functioning
@@ -76,9 +100,14 @@ opacity: 1;
 padding: 10px ;
 gap:15px;
 }
+#functioning i {
+    font-size: 12px ;
+    color: #9356DC;
+}
 h2
 {
     margin: 0;
+    font-family: "skrikland",Arial, Helvetica, sans-serif;
 }
 .stage
 {
@@ -130,7 +159,12 @@ footer h3 ,footer i ,footer span
 }
 footer h3 {
     padding: 0 20px;
+    font-family: "shrikhand",Arial, Helvetica, sans-serif;
 
+}
+#contact i{
+    font-size: 12px;
+    padding-right: 10px;
 }
 #contact
 {
@@ -151,9 +185,11 @@ a
 }
 .description h3 , .description p {
     margin:5px 10px;
+    
 }
 .description i{
     padding: 0 15px;
+    font-size: 20px;
 } 
 section {
     margin:20px 0;

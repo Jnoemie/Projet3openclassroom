@@ -93,7 +93,7 @@ body {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #353535;
     height: 100px;
     width: 100%;
 }
@@ -135,10 +135,11 @@ footer h3 {
 }
 
 .searchbutton {
-    background-color: #FF79DA;
+    background: linear-gradient(#ff79DA, #9356DC) ;
     border-radius: 20px;
     height: 40px;
     width: 210px;
+    border-color: transparent;
 
 }
 
@@ -167,8 +168,8 @@ footer h3 {
 
     .logo {
         display: flex;
-        width: 50%;
-        height: 50%;
+        width: 54%;
+        height: 54%;
         margin: auto;
     }
 
@@ -205,7 +206,9 @@ footer h3 {
     #hight h2 {
         margin-top: 32px;
         margin-bottom: 0;
-        font-family: "shrikhand", Arial, Helvetica, sans-serif;
+        font-family: "roboto", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: larger;
 
     }
 
@@ -224,7 +227,7 @@ footer h3 {
 
     h2 {
         margin: 0;
-        font-family: "skrikland", Arial, Helvetica, sans-serif;
+        font-family: "roboto", Arial, Helvetica, sans-serif;
         padding: 15px;
     }
 
@@ -271,7 +274,7 @@ footer h3 {
     }
 
     footer {
-        background-color: black;
+        background-color: #353535;
         height: 200px;
     }
 

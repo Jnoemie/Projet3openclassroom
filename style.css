@@ -19,14 +19,15 @@
     src: url(font/Shrikhand/Shrikhand-Regular.ttf)
 }
 
-a
-{
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a :hover {
     text-decoration: none;
 }
-a :hover
-{
-    text-decoration: none;
-}
+
 * {
     box-sizing: border-box;
 }
@@ -38,79 +39,83 @@ body {
 
 
 
-.logo
-{
-width: 300px;
-height: 100px;
+.logo {
+    width: 300px;
+    height: 100px;
 }
-.logo img
-{
+
+.logo img {
     object-fit: cover;
-    width:100%;
+    width: 100%;
     padding-top: 20px;
 }
-.stage
-{
+
+.stage {
     display: flex;
     background-color: #F8F9f9;
-width: 300px;
-   border-radius: 15px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    width: 300px;
+    border-radius: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-#functioning 
-{
-    display:flex;
 
-    gap:30px;
+#functioning {
+    display: flex;
+
+    gap: 30px;
 }
-#rest
-{ display:flex;
+
+#rest {
+    display: flex;
     justify-content: space-around;
 
 }
-#rest img
-{
+
+#rest img {
     object-fit: cover;
     width:300px;
-    height:200px
+    height: 200px;
 }
-.new
-{
- position: absolute;
- background-color: #99E2D0;
+
+.new {
+    position: absolute;
+    background-color: #99E2D0;
 }
-.description
-{
+
+.description {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-footer
-{
+
+footer {
     background-color: #000000;
     height: 100px;
     width: 100%;
 }
-#contact
-{
+
+#contact {
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap: 30px;
     padding-left: 10px;
-    
+
 }
-footer span , footer h3 , footer i{
+
+footer span,
+footer h3,
+footer i {
     color: #FFFFFF;
 }
-footer h3
-{
- padding: 10px;
- font-size: 25px;
+
+footer h3 {
+    padding: 10px;
+    font-size: 25px;
 }
+
 .stage p {
 
     background-color: #9356DC;
@@ -119,13 +124,28 @@ footer h3
     height: 20px;
     padding: 0 5px;
     margin-left: -12px;
+    color: #FFFFFF;
 }
-@media screen and ( max-width:1000px)
+
+    
+
+#rest a 
 {
-#rest img
-{
-width :150px;
+    width: 20%;
 }
+.searchbutton
+{
+    background-color:  #FF79DA;
+    border-radius: 20px;
+    height: 40px;
+    width: 210px;
+    
+}
+
+@media screen and (max-width:1000px) {
+    #rest img {
+        width: 150px;
+    }
 }
 
 
@@ -152,10 +172,11 @@ width :150px;
         margin: auto;
     }
 
-    img {
+    .logo img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+        padding: 0;
     }
 
     #hight {
@@ -163,7 +184,7 @@ width :150px;
         flex-direction: column;
         align-items: center;
         background-color: #F8F9f9;
-        height: 250px;
+        height: 270px;
         margin: 0;
     }
 
@@ -192,7 +213,7 @@ width :150px;
         display: flex;
         flex-direction: column;
         width: 95%;
-        margin: 0px 0px 0px 17px ;
+        margin: 0px 0px 0px 17px;
         gap: 15px;
     }
 
@@ -243,7 +264,7 @@ width :150px;
 
     }
 
-    .restaurant img {
+    #rest img {
         height: 75%;
         width: 100%;
         border-radius: 15px 15px 0 0;
@@ -251,8 +272,7 @@ width :150px;
 
     footer {
         background-color: black;
-        display: flex;
-        flex-direction: column;
+        height: 200px;
     }
 
     footer h3,
@@ -276,6 +296,8 @@ width :150px;
         list-style-type: none;
         padding: 0 20Px;
         gap: 10px;
+        display: flex;
+        flex-direction: column;
     }
 
     a {
@@ -302,26 +324,25 @@ width :150px;
 
     section {
         margin: 20px 0;
-        
+
     }
 
     #form i {
         padding: 0 15px;
     }
-    #restaurantsection
-    {
+
+    #restaurantsection {
         background-color: #F8F9f9;
         height: 1150px;
     }
-    
-.new
-{
-    position: absolute;
-    margin-left: 220px;
-    margin-top: 10px;
-    padding:5px;
-    background-color: #99E2D0;
+
+    .new {
+        position: absolute;
+        margin-left: 220px;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: #99E2D0;
 
 
-}
+    }
 }

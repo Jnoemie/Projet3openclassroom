@@ -1,17 +1,17 @@
 @font-face {
     font-family: "roboto";
     src: url(font/Roboto/Roboto-Black.ttf);
-    src: url(font/Roboto/Roboto-BlackItalic.ttf);
+    /*src: url(font/Roboto/Roboto-BlackItalic.ttf);*/
     src: url(font/Roboto/Roboto-Bold.ttf);
-    src: url(font/Roboto/Roboto-BoldItalic.ttf);
-    src: url(font/Roboto/Roboto-Italic.ttf);
+
+    /*src: url(font/Roboto/Roboto-Italic.ttf);*/
     src: url(font/Roboto/Roboto-Light.ttf);
-    src: url(font/Roboto/Roboto-LightItalic.ttf);
+   /* src: url(font/Roboto/Roboto-LightItalic.ttf);*/
     src: url(font/Roboto/Roboto-Medium.ttf);
-    src: url(font/Roboto/Roboto-MediumItalic.ttf);
+   /* src: url(font/Roboto/Roboto-MediumItalic.ttf);*/
     src: url(font/Roboto/Roboto-Regular.ttf);
     src: url(font/Roboto/Roboto-Thin.ttf);
-    src: url(font/Roboto/Roboto-ThinItalic.ttf);
+   /* src: url(font/Roboto/Roboto-ThinItalic.ttf);*/
 }
 
 @font-face {
@@ -146,8 +146,5 @@ justify-content: space-between;
 margin:auto;
 }
 h2{ padding-left: 10px;}
-main{
-    width: 100%;
-}
-}
+
 }

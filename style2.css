@@ -1,8 +1,57 @@
+@font-face {
+    font-family: "roboto";
+    src: url(font/Roboto/Roboto-Black.ttf);
+    src: url(font/Roboto/Roboto-BlackItalic.ttf);
+    src: url(font/Roboto/Roboto-Bold.ttf);
+    src: url(font/Roboto/Roboto-BoldItalic.ttf);
+    src: url(font/Roboto/Roboto-Italic.ttf);
+    src: url(font/Roboto/Roboto-Light.ttf);
+    src: url(font/Roboto/Roboto-LightItalic.ttf);
+    src: url(font/Roboto/Roboto-Medium.ttf);
+    src: url(font/Roboto/Roboto-MediumItalic.ttf);
+    src: url(font/Roboto/Roboto-Regular.ttf);
+    src: url(font/Roboto/Roboto-Thin.ttf);
+    src: url(font/Roboto/Roboto-ThinItalic.ttf);
+}
+
+@font-face {
+    font-family: "shrikhand";
+    src: url(font/Shrikhand/Shrikhand-Regular.ttf);
+    
+
+}
+body
+{ font-family: 'roboto', Arial, Helvetica, sans-serif;
+font-style: normal;}
 
 @media all and (max-device-width:768px)
 {
-    
-
+    #logo 
+    {
+        width: 50%;
+        padding: 15px;
+        margin: auto;
+    }
+    #logo img {
+width: 100%;
+object-fit: cover;
+    }
+    #photo
+    {
+width:95%;
+height: 200px ;
+margin: auto;
+    }
+#photo img
+{
+    width: 100%;
+}
+#title 
+{
+    display:flex;
+    align-items: center;
+    gap: 50px;
+}
 footer{
     background-color: black;
     display:flex;

@@ -301,24 +301,36 @@ height: 100%;
     
     }
   
- }
-.check
+h2::after
 {
- display: none;
+ content: '';
+ display: block;
 }
-.check:hover
-{
-    transform-origin: top-left;
-    animation-name: slide-left;
-    animation-duration: 0,5s;
-    animation-fill-mode: both;
-}
-@keyframes slide-left {
+
+@keyframes fadain {
     0%{
-        transform: translateX(0);
+        opacity: 0;
     }
     100%
 {
-    transform: translateX(100);
+    opacity: 1;
+}
+
+}
+#Entrees
+
+{
+    animation-name: fadain;
+    animation-duration: 2s;
+}
+#Plats
+{
+    animation-name: fadain;
+    animation-duration: 4s;
+}
+#Desserts
+{
+    animation-name: fadain;
+    animation-duration: 6s;
 }
 }

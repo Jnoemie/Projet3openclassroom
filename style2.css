@@ -133,17 +133,17 @@ footer h3 {
         width: 50%;
         padding: 15px;
         margin: auto;
-        
+
     }
 
     #logo img {
         width: 100%;
         object-fit: cover;
     }
-    #fleche
-    {
+
+    #fleche {
         position: absolute;
-        margin:20px 12px;
+        margin: 20px 12px;
         font-size: 20px;
     }
 
@@ -271,9 +271,10 @@ footer h3 {
         height: 40px;
         border: 0px;
     }
-    #order:hover
-    {
-        opacity: 0.7;
+
+    #order:hover {
+        opacity: 0.8;
+        box-shadow: 2px 2px 2px;
     }
 
     a span {
@@ -293,44 +294,42 @@ footer h3 {
         height: 3px;
         margin: 0 11px;
     }
-    #order a
-    {
-display: flex;
-width: 100%;
-height: 100%;
-    
+
+    #order a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
     }
-  
-h2::after
-{
- content: '';
- display: block;
-}
 
-@keyframes fadain {
-    0%{
-        opacity: 0;
+    h2::after {
+        content: '';
+        display: block;
     }
-    100%
-{
-    opacity: 1;
-}
 
-}
-#Entrees
+    @keyframes scroll {
+        0% {
+            opacity: 0;
+        }
 
-{
-    animation-name: fadain;
-    animation-duration: 2s;
-}
-#Plats
-{
-    animation-name: fadain;
-    animation-duration: 4s;
-}
-#Desserts
-{
-    animation-name: fadain;
-    animation-duration: 6s;
-}
+        100% {
+            opacity: 1;
+        }
+
+    }
+
+    #Entrees {
+        animation-name: scroll;
+        animation-duration: 2s;
+    }
+
+    #Plats {
+        animation-name: scroll;
+        animation-duration: 4s;
+    }
+
+    #Desserts {
+        animation-name: scroll;
+        animation-duration: 6s;
+    }
 }

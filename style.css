@@ -61,6 +61,14 @@ body {
     align-items: center;
     gap: 10px;
 }
+.stage:hover
+{
+background-color: #f5f0fC;
+}
+.stage:hover i 
+{
+ color:#9356DC;
+}
 
 #functioning {
     display: flex;
@@ -295,9 +303,9 @@ a span {
         gap: 15px;
     }
 
-    #functioning i {
+    .stage i {
         font-size: 12px;
-        color: #9356DC;
+        color:#646464;
     }
 
     h2 {

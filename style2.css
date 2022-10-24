@@ -325,11 +325,11 @@ footer h3 {
 
     #Plats {
         animation-name: scroll;
-        animation-duration: 4s;
+        animation-duration: 6s;
     }
 
     #Desserts {
         animation-name: scroll;
-        animation-duration: 6s;
+        animation-duration: 10s;
     }
 }

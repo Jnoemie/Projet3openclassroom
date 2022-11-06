@@ -110,18 +110,18 @@ footer h3 {
 .confirmation {
     background-color: #99E2D0;
     height: auto;
-    width: 0;
-    opacity: 0;
+    width: 80px;
     border-radius: 0 15px 15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 5s;
+
 }
 
+
 .dish:hover .confirmation {
-    opacity: 100%;
-    width: 80px;
+    animation:slide-left 0.5s bot;
+
 
 }
 
@@ -153,6 +153,17 @@ footer h3 {
 }
 
 
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+              transform: translateX(-80px);
+    }
+  }
+  
 @media all and (max-device-width:1000px) {
     #contact {
         display: flex;
@@ -374,18 +385,20 @@ footer h3 {
     .confirmation {
         background-color: #99E2D0;
         height: auto;
-        width: 0;
-        opacity: 0;
+        width: 80px;
+        opacity: 1;
         border-radius: 0 15px 15px 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: transform 5s;
+       
+        margin: 0 -80px 0 7px;
     }
+    
 
     .dish:hover .confirmation {
-        opacity: 100%;
-        width: 80px;
+        animation:slide-left 0.5s both;
+        margin-left: 85px;
 
     }
 
@@ -415,4 +428,5 @@ footer h3 {
     .dish:hover .circle {
         transform: rotate(360deg);
     }
-}
+
+    }

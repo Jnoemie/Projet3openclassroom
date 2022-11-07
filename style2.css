@@ -42,16 +42,29 @@ body {
 h3 {
     margin: 0;
 }
+#order a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+}
 
 #menu,
 #menu1 {
     padding-left: 20px;
+
+}
+#menubis
+{
+    display:flex;
+    gap:40px;
 }
 
 .descriptionmenu {
     display: flex;
-    justify-content: space-between;
     width: 500px;
+    flex-direction: column;
 
 }
 
@@ -65,6 +78,9 @@ h1 {
 
 .dish {
     margin: 20px 0;
+    display:flex;
+    width: 70%;
+
 }
 
 #order {
@@ -111,20 +127,21 @@ footer h3 {
     background-color: #99E2D0;
     height: auto;
     width: 80px;
+    opacity: 0;
     border-radius: 0 15px 15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin: 0 -80px 0 7px;
 }
 
 
 .dish:hover .confirmation {
-    animation:slide-left 0.5s bot;
-
+    animation:slide-left 0.5s both;
+    margin-left: 85px;
+    opacity: 1;
 
 }
-
 .prix {
     font-weight: 700;
     display: flex;
@@ -163,13 +180,108 @@ footer h3 {
               transform: translateX(-80px);
     }
   }
-  
-@media all and (max-device-width:1000px) {
+  @keyframes heart2 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+      background-image: linear-gradient( #9356DC, #FF79DA);
+      -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    }
+    100% {
+      opacity: 1;
+      background-image: linear-gradient( #9356DC, #FF79DA);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    }
+  }
+  @keyframes heart1 {
+    0% {
+      opacity: 1;
+    }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+  .heart {
+    position: relative;
+  }
+  .heart1 {
+    position: relative;
+
+
+  }
+  .heart1:hover {
+
+    animation: heart1 0.5s both;
+  }
+  .heart2 {
+    position: absolute;
+   top: 0px;
+   opacity: 0;
+    color: #FFF;
+  }
+  .heart2:hover {
+    
+    animation: heart2 0.5s forwards;
+
+}
+
+h2::after {
+    content: '';
+    display: block;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+#Entrees {
+    animation-name: scroll;
+    animation-duration: 2s;
+}
+
+#Plats {
+    animation-name: scroll;
+    animation-duration: 6s;
+}
+
+#Desserts {
+    animation-name: scroll;
+    animation-duration: 10s;
+}
+#order:hover {
+    opacity: 0.8;
+    box-shadow: 2px 2px 2px;
+}
+
+@media all and (max-device-width:1400px) {
     #contact {
         display: flex;
         gap: 25px;
     }
+    #menubis 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .confirmation
+    {
+        opacity: 0;
+    }
 }
+
 
 @media all and (max-device-width:768px) {
     #logo {
@@ -391,7 +503,6 @@ footer h3 {
         display: flex;
         align-items: center;
         justify-content: center;
-       
         margin: 0 -80px 0 7px;
     }
     
@@ -479,4 +590,8 @@ footer h3 {
         animation: heart2 0.5s forwards;
 
 }
+#menubis{
+    display:block;
+}
+
     }

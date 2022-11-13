@@ -205,6 +205,10 @@ body {
 
 .heart {
     position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: -35px 15px;
+    font-size:20px;
 }
 
 .heart1 {

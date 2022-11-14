@@ -226,13 +226,7 @@ h2::after {
 }
 
 
-#order a {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
 
-}
 
 
 /*commander */
@@ -246,6 +240,7 @@ h2::after {
     width: 230px;
     height: 50px;
     border: 0px;
+    cursor: pointer;
 }
 
 #order span {
@@ -284,7 +279,7 @@ footer h3 {
     padding-left: 10px;
 }
 
-@media all and (max-device-width:1400px) {
+@media all and (max-width:1400px) {
     #contact {
         display: flex;
         gap: 25px;
@@ -297,7 +292,7 @@ footer h3 {
 }
 
 
-@media all and (max-device-width:768px) {
+@media all and (max-width:768px) {
     a {
         text-decoration: none;
     }
@@ -327,7 +322,6 @@ footer h3 {
 
     #photo {
         width: 100%;
-        margin: auto;
     }
 
     /*titre*/
@@ -363,9 +357,8 @@ footer h3 {
     #menu {
         background-color: #f8f9F9;
         border-radius: 30px 30px 0 0;
-        margin: -30px auto 0 auto;
+        margin: -30px 0 0 0;
         position: relative;
-        width: 100%;
         height: 1170px;
         padding: 0;
     }
@@ -373,9 +366,9 @@ footer h3 {
     #menu1 {
         background-color: #f8f9F9;
         border-radius: 30px 30px 0 0;
-        margin: -30px auto 0 auto;
+        margin: -30px 0 0 0;
         position: relative;
-        width: 100%;
+
         height: 1270px;
         padding: 0;
     }
@@ -447,7 +440,7 @@ footer h3 {
 
     footer {
 
-        width: 100%;
+
         height: 180px;
     }
 

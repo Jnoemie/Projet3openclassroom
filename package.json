@@ -1,0 +1,22 @@
+{
+  "name": "projet3openclassroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style2.scss:./public/css/style2.css ./sass/style.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jnoemie/Projet3openclassroom.git"
+  },
+  "keywords": [
+    "Pastouche"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jnoemie/Projet3openclassroom/issues"
+  },
+  "homepage": "https://github.com/Jnoemie/Projet3openclassroom#readme"
+}

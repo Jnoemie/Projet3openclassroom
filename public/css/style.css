@@ -54,7 +54,6 @@ a :hover {
 }
 
 html, body {
-  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -68,7 +67,6 @@ body {
   width: 300px;
   height: 100px;
 }
-
 .logo img {
   object-fit: cover;
   width: 100%;
@@ -90,8 +88,7 @@ body {
   animation-delay: 1.5s;
   pointer-events: none;
 }
-
-.loading::after {
+.loading ::after {
   content: "";
   display: flex;
   position: absolute;

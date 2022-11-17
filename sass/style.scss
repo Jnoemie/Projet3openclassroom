@@ -66,7 +66,6 @@ a :hover {
 }
 
 html, body{
-    min-height: 100%;
     overflow-x: hidden;
 }
 body {
@@ -79,14 +78,12 @@ body {
 
     width: 300px;
     height: 100px;
-}
-
-.logo img {
+     img {
     object-fit: cover;
     width: 100%;
     padding-top: 20px;
+        }
 }
-
 /*loading*/
 .loading {
     display: flex;
@@ -101,27 +98,28 @@ body {
     animation-fill-mode: forwards;
     animation-delay: 1.5s;
     pointer-events: none;
+        ::after {
+            content: "";
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: $color-tertiaire solid 5px;
+            border-top-color: $color-primaire;
+            border-bottom-color: $color-secondaire;
+            border-radius: 50%;
+            animation-name: spin;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+                }
 
-}
-
-.loading::after {
-    content: "";
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    border: $color-tertiaire solid 5px;
-    border-top-color: $color-primaire;
-    border-bottom-color: $color-secondaire;
-    border-radius: 50%;
-    animation-name: spin;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-}
+                
+                    
+        }
 
 /* fonctionnement*/
 #functioning {

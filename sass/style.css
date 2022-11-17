@@ -90,7 +90,6 @@ a :hover {
 }
 
 html, body {
-  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -104,10 +103,9 @@ body {
   width: 300px;
   height: 100px;
 }
-
 .logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
+
+  object-fit: cover;
   width: 100%;
   padding-top: 20px;
 }

@@ -350,9 +350,6 @@ footer h3 {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  .confirmation {
-    opacity: 1;
-  }
   .prix {
     padding-left: 15px;
     padding-top: 30px;

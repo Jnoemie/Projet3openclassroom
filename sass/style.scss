@@ -1,6 +1,6 @@
 @import "utils/variables";
 
-@font-face{
+@font-face {
     font-family: "shrikhand";
     src: url(font/Shrikhand/Shrikhand-Regular.ttf);
 
@@ -55,22 +55,24 @@
 a {
     text-decoration: none;
     color: #000000;
-}
 
-a :hover {
-    text-decoration: none;
+    :hover {
+        text-decoration: none;
+    }
 }
 
 * {
     box-sizing: border-box;
 }
 
-html, body{
+html {
     overflow-x: hidden;
 }
+
 body {
     margin: 0;
     padding: 10px;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
 }
 
 /*header*/
@@ -78,12 +80,14 @@ body {
 
     width: 300px;
     height: 100px;
-     img {
-    object-fit: cover;
-    width: 100%;
-    padding-top: 20px;
-        }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        padding-top: 20px;
+    }
 }
+
 /*loading*/
 .loading {
     display: flex;
@@ -91,71 +95,71 @@ body {
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: lightgrey;
+    background-color: $color-grey;
     animation-name: loader;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 1.5s;
     pointer-events: none;
-        ::after {
-            content: "";
-            display: flex;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            border: $color-tertiaire solid 5px;
-            border-top-color: $color-primaire;
-            border-bottom-color: $color-secondaire;
-            border-radius: 50%;
-            animation-name: spin;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-                }
 
-                
-                    
-        }
+    ::after {
+        content: "";
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: $color-tertiaire solid 5px;
+        border-top-color: $color-primaire;
+        border-bottom-color: $color-secondaire;
+        border-radius: 50%;
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
+
+
+
+}
 
 /* fonctionnement*/
 #functioning {
     display: flex;
     margin: 0 15px;
     gap: 30px;
-}
 
-.stage {
-    display: flex;
-    background-color: #F8F9f9;
-    width: 300px;
-    border-radius: 15px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    .stage {
+        display: flex;
+        background-color: $color-grey;
+        width: 90%;
+        border-radius: 15px;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
 
-.stage:hover {
-    background-color: #f5f0fC;
-}
+        p {
 
-.stage:hover i {
-    color: $color-primaire;
-}
+            background-color: $color-primaire;
+            border-radius: 15px;
+            width: 20px;
+            height: 20px;
+            padding: 0 5px;
+            margin-left: -12px;
+            color: $color-white;
+        }
 
-.stage p {
+        &:hover {
+            background-color: #f5f0fC;
 
-    background-color: $color-primaire;
-    border-radius: 15px;
-    width: 20px;
-    height: 20px;
-    padding: 0 5px;
-    margin-left: -12px;
-    color: #FFFFFF;
+            i {
+                color: $color-primaire;
+            }
+        }
+    }
 }
 
 /*explorer*/
@@ -168,48 +172,50 @@ body {
     margin: 23px 0;
     cursor: pointer;
 
-}
+    span {
+        color: $color-white;
 
+    }
 
-.searchbutton span {
-color: #FFF;
-
-}
-
-.searchbutton:hover {
-    opacity: 0.8;
-    box-shadow: 2px 2px 2px;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 2px 2px 2px;
+    }
 }
 
 /*restaurant*/
-.restaurant{
-    height: 270px;
-}
 
 #rest {
     display: flex;
     justify-content: space-around;
 
-}
+    .restaurant {
+        height: 300px;
+        width: 20%;
+    }
 
-.restaurantimage {
-    object-fit: cover;
-    width: 300px;
-    height: 200px;
-}
-.restaurantimage img{
-    width: 100%;
-    height: 100%;
-}
-.new {
-    position: absolute;
-    background-color: #99E2D0;
-}
+    .restaurantimage {
+        object-fit: cover;
+        width: 100%;
+        height: 70%;
 
-.description {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+    }
+
+    .new {
+        position: absolute;
+        background-color: $color-tertiaire;
+    }
+
+    .description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .heart {
@@ -217,35 +223,33 @@ color: #FFF;
     display: flex;
     flex-direction: row-reverse;
     margin: -35px 15px;
-    font-size:20px;
-}
+    font-size: 20px;
 
-.heart1 {
-    position: relative;
+    .heart1 {
+        position: relative;
 
+        &:hover {
 
-}
+            animation-name: heart1;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+    }
 
-.heart1:hover {
+    .heart2 {
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        color: $color-white;
 
-    animation-name: heart1;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-}
+        &:hover {
 
-.heart2 {
-    position: absolute;
-    top: 0px;
-    opacity: 0;
-    color: #FFF;
-}
+            animation-name: heart2;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
 
-.heart2:hover {
-
-    animation-name: heart2;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-
+        }
+    }
 }
 
 /*footer*/
@@ -253,47 +257,46 @@ footer {
     background-color: $color-footer;
     height: 100px;
     width: 100%;
-}
 
-#contact {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding-left: 10px;
+    #contact {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding-left: 10px;
 
-}
 
-footer span,
-footer h3,
-footer i {
-    color: #FFFFFF;
-}
-
-footer h3 {
-    padding: 10px;
-    font-size: 25px;
-    font-family: "shrikhand", Arial, Helvetica, sans-serif;
-}
-
-a span {
-    color: #f2f2f2;
-    margin: auto;
-}
-
-@media screen and (max-width:1400px) {
-    .restaurantimage {
-        width: 150px;
+        span,
+        i {
+            color: $color-white;
+        }
     }
+
+    h3 {
+        padding: 10px;
+        font-size: 25px;
+        font-family: "shrikhand", Arial, Helvetica, sans-serif;
+        color: $color-white;
+    }
+
 }
 
+@media screen and (max-width:1024px) {
+    #rest {
+        flex-direction: column;
+        height: 1500px;
+        width: 50%;
+
+        .restaurant {
+            width: 80%;
+        }
+    }
+
+}
 
 @media all and (max-width: 768px) {
 
 
     body {
-
-        margin: 0;
-        font-family: "roboto", Arial, Helvetica, sans-serif;
         padding: 0;
     }
 
@@ -310,19 +313,18 @@ a span {
         padding: 10px 0;
         height: 75px;
 
-    }
+        .logo {
+            display: flex;
+            width: 54%;
+            height: 50%;
+            margin: auto;
 
-    .logo {
-        display: flex;
-        width: 54%;
-        height: 50%;
-        margin: auto;
-    }
-
-    .logo img {
-        object-fit: contain;
-        height: 100%;
-        padding: 0;
+            img {
+                object-fit: contain;
+                height: 100%;
+                padding: 0;
+            }
+        }
     }
 
     /*formulaire*/
@@ -333,39 +335,39 @@ a span {
         justify-content: center;
         align-items: center;
         height: 35px;
-    }
 
-    #form i {
-        padding: 0 15px;
-    }
+        i {
+            padding: 0 15px;
+        }
 
+    }
 
     /* premiere section*/
     #hight {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #F8F9f9;
+        background-color: $color-grey;
         height: 230px;
         margin-bottom: 15px;
-    }
 
 
-    #hight h2,
-    #hight p {
-        text-align: center;
-        padding: 0 15px;
+
+        h2,
+        p {
+            text-align: center;
+            padding: 0 15px;
 
 
-    }
+        }
 
-    #hight h2 {
-        margin-top: 32px;
-        margin-bottom: 0;
-        font-family: "roboto", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: larger;
+        h2 {
+            margin-top: 32px;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: larger;
 
+        }
     }
 
     /*fonctionnement*/
@@ -375,64 +377,68 @@ a span {
         width: 100%;
         margin: 0px 0px 30px 27px;
         gap: 15px;
-    }
 
-    .stage {
 
-        width: 90%;
+        .stage {
+
+            width: 90%;
+        }
     }
 
     /*restaurant*/
-
-    .restaurant {
-        background-color: #fdfefe;
-        border-radius: 20px;
-        width: 100%;
-        height: 250px;
+    #restaurantsection {
+        background-color: $color-grey;
+        height: 1150px;
     }
 
     #rest {
 
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         width: 95%;
+        height: auto;
         margin: 0 auto;
-
-    }
-
-    .restaurantimage{
-        height: 75%;
-        width: 100%;
-        border-radius: 15px 15px 0 0;
-    }
-.restaurantimage img 
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-    .description {
-
-        justify-content: space-between;
-        gap: 5px;
-    }
-
-    .description h3,
-    .description p {
-        margin: 5px 10px;
-
-    }
-
-    .description i {
-        padding: 0 15px;
-        font-size: 20px;
-    }
+        justify-content: flex-start;
 
 
-    #restaurantsection {
-        background-color: #F8F9f9;
+        .restaurant {
+            background-color: $color-white;
+            border-radius: 20px;
+            width: 100%;
+            height: 250px;
+            margin: 0 auto;
+        }
 
-        height: 1150px;
+
+
+        .restaurantimage {
+            height: 75%;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .description {
+
+            justify-content: space-between;
+            gap: 5px;
+
+            h3,
+            p {
+                margin: 5px 10px;
+
+            }
+
+            i {
+                padding: 0 15px;
+                font-size: 20px;
+            }
+        }
     }
 
     .new {
@@ -444,22 +450,12 @@ a span {
     /*footer*/
     footer {
         height: 170px;
-    }
 
-
-    footer h3 {
-        padding: 10px 0 10px 15px;
-
-        margin: 0;
-        font-size: 20px;
-    
-
-
-    }
-
-    #contact i {
-        font-size: 12px;
-        padding-right: 10px;
+        h3 {
+            padding: 10px 0 10px 15px;
+            margin: 0;
+            font-size: 20px;
+        }
     }
 
     #contact {
@@ -467,10 +463,12 @@ a span {
         padding: 0 20px;
         gap: 4px;
         flex-direction: column;
+
+        i {
+            font-size: 12px;
+            padding-right: 10px;
+        }
+
+
     }
-
-
-
-
-
 }

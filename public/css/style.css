@@ -44,7 +44,6 @@ a {
   text-decoration: none;
   color: #000000;
 }
-
 a :hover {
   text-decoration: none;
 }
@@ -53,13 +52,14 @@ a :hover {
   box-sizing: border-box;
 }
 
-html, body {
+html {
   overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 10px;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 
 /*header*/
@@ -80,7 +80,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: lightgrey;
+  background-color: #f8F9F9;
   animation-name: loader;
   animation-duration: 1s;
   animation-iteration-count: 1;
@@ -113,34 +113,29 @@ body {
   margin: 0 15px;
   gap: 30px;
 }
-
-.stage {
+#functioning .stage {
   display: flex;
-  background-color: #F8F9f9;
-  width: 300px;
+  background-color: #f8F9F9;
+  width: 90%;
   border-radius: 15px;
   height: 50px;
-  display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.stage:hover {
-  background-color: #f5f0fC;
-}
-
-.stage:hover i {
-  color: #9356DC;
-}
-
-.stage p {
+#functioning .stage p {
   background-color: #9356DC;
   border-radius: 15px;
   width: 20px;
   height: 20px;
   padding: 0 5px;
   margin-left: -12px;
-  color: #FFFFFF;
+  color: #fFFFFF;
+}
+#functioning .stage:hover {
+  background-color: #f5f0fC;
+}
+#functioning .stage:hover i {
+  color: #9356DC;
 }
 
 /*explorer*/
@@ -153,43 +148,38 @@ body {
   margin: 23px 0;
   cursor: pointer;
 }
-
 .searchbutton span {
-  color: #FFF;
+  color: #fFFFFF;
 }
-
 .searchbutton:hover {
   opacity: 0.8;
   box-shadow: 2px 2px 2px;
 }
 
 /*restaurant*/
-.restaurant {
-  height: 270px;
-}
-
 #rest {
   display: flex;
   justify-content: space-around;
 }
-
-.restaurantimage {
-  object-fit: cover;
-  width: 300px;
-  height: 200px;
+#rest .restaurant {
+  height: 300px;
+  width: 20%;
 }
-
-.restaurantimage img {
+#rest .restaurantimage {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+}
+#rest .restaurantimage img {
   width: 100%;
   height: 100%;
+  border-radius: 15px 15px 0 0;
 }
-
-.new {
+#rest .new {
   position: absolute;
   background-color: #99E2D0;
 }
-
-.description {
+#rest .description {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,25 +192,21 @@ body {
   margin: -35px 15px;
   font-size: 20px;
 }
-
-.heart1 {
+.heart .heart1 {
   position: relative;
 }
-
-.heart1:hover {
+.heart .heart1:hover {
   animation-name: heart1;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-
-.heart2 {
+.heart .heart2 {
   position: absolute;
   top: 0px;
   opacity: 0;
-  color: #FFF;
+  color: #fFFFFF;
 }
-
-.heart2:hover {
+.heart .heart2:hover {
   animation-name: heart2;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -232,40 +218,35 @@ footer {
   height: 100px;
   width: 100%;
 }
-
-#contact {
+footer #contact {
   display: flex;
   flex-direction: row;
   gap: 30px;
   padding-left: 10px;
 }
-
-footer span,
-footer h3,
-footer i {
-  color: #FFFFFF;
+footer #contact span,
+footer #contact i {
+  color: #fFFFFF;
 }
-
 footer h3 {
   padding: 10px;
   font-size: 25px;
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  color: #fFFFFF;
 }
 
-a span {
-  color: #f2f2f2;
-  margin: auto;
-}
-
-@media screen and (max-width: 1400px) {
-  .restaurantimage {
-    width: 150px;
+@media screen and (max-width: 1024px) {
+  #rest {
+    flex-direction: column;
+    height: 1500px;
+    width: 50%;
+  }
+  #rest .restaurant {
+    width: 80%;
   }
 }
 @media all and (max-width: 768px) {
   body {
-    margin: 0;
-    font-family: "roboto", Arial, Helvetica, sans-serif;
     padding: 0;
   }
   h2 {
@@ -279,13 +260,13 @@ a span {
     padding: 10px 0;
     height: 75px;
   }
-  .logo {
+  header .logo {
     display: flex;
     width: 54%;
     height: 50%;
     margin: auto;
   }
-  .logo img {
+  header .logo img {
     object-fit: contain;
     height: 100%;
     padding: 0;
@@ -306,7 +287,7 @@ a span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F8F9f9;
+    background-color: #f8F9F9;
     height: 230px;
     margin-bottom: 15px;
   }
@@ -318,7 +299,6 @@ a span {
   #hight h2 {
     margin-top: 32px;
     margin-bottom: 0;
-    font-family: "roboto", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: larger;
   }
@@ -329,47 +309,50 @@ a span {
     margin: 0px 0px 30px 27px;
     gap: 15px;
   }
-  .stage {
+  #functioning .stage {
     width: 90%;
   }
   /*restaurant*/
-  .restaurant {
-    background-color: #fdfefe;
-    border-radius: 20px;
-    width: 100%;
-    height: 250px;
+  #restaurantsection {
+    background-color: #f8F9F9;
+    height: 1150px;
   }
   #rest {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     width: 95%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  #rest .restaurant {
+    background-color: #fFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    height: 250px;
     margin: 0 auto;
   }
-  .restaurantimage {
+  #rest .restaurantimage {
     height: 75%;
     width: 100%;
     border-radius: 15px 15px 0 0;
   }
-  .restaurantimage img {
+  #rest .restaurantimage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .description {
+  #rest .description {
     justify-content: space-between;
     gap: 5px;
   }
-  .description h3,
-  .description p {
+  #rest .description h3,
+  #rest .description p {
     margin: 5px 10px;
   }
-  .description i {
+  #rest .description i {
     padding: 0 15px;
     font-size: 20px;
-  }
-  #restaurantsection {
-    background-color: #F8F9f9;
-    height: 1150px;
   }
   .new {
     margin-left: 260px;
@@ -385,15 +368,15 @@ a span {
     margin: 0;
     font-size: 20px;
   }
-  #contact i {
-    font-size: 12px;
-    padding-right: 10px;
-  }
   #contact {
     list-style-type: none;
     padding: 0 20px;
     gap: 4px;
     flex-direction: column;
+  }
+  #contact i {
+    font-size: 12px;
+    padding-right: 10px;
   }
 }
 

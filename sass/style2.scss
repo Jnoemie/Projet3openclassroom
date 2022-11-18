@@ -1,5 +1,5 @@
-
 @import "utils/_variables";
+@import "utils/mixins.scss";
 
 @font-face {
     font-family: "shrikhand";
@@ -87,14 +87,14 @@ h3 {
 
 #photo {
     width: 95%;
-    height: 200px
-}
 
-#photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 200px ;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
 
+    }
 }
 
 h1 {
@@ -103,33 +103,35 @@ h1 {
 
 .heart {
     position: relative;
-}
 
-.heart1 {
-    position: relative;
+    .heart1 {
+        position: relative;
 
 
-}
 
-.heart1:hover {
 
-    animation-name: heart1;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-}
+        &:hover {
 
-.heart2 {
-    position: absolute;
-    top: 0px;
-    opacity: 0;
+            animation-name: heart1;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+    }
 
-}
+    .heart2 {
+        position: absolute;
+        top: 0px;
+        opacity: 0;
 
-.heart2:hover{
 
-    animation-name: heart2;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+
+        &:hover {
+
+            animation-name: heart2;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
 }
 
 /*menu */
@@ -172,63 +174,73 @@ h2::after {
     display: flex;
     width: 70%;
 
+
+    &:hover {
+        .prix {
+            font-weight: 700;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .confirmation {
+            animation-name: slide-left;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            margin-left: 85px;
+            opacity: 1;
+
+        }
+
+        .circle {
+            transform: rotate(360deg);
+        }
+
+
+    }
+
+    .descriptionmenu {
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+
+
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
+    .confirmation {
+        background-color: $color-tertiaire;
+        height: auto;
+        width: 80px;
+        opacity: 0;
+        border-radius: 0 15px 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -80px 0 7px;
+    }
+
+
+
+
+    .circle {
+        background-color: #FFFFFF;
+        border-radius: 100px;
+        width: 25px;
+        height: 25px;
+        color: #99E2D0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 1S;
+    }
+
 }
 
-.confirmation {
-    background-color: $color-tertiaire;
-    height: auto;
-    width: 80px;
-    opacity: 0;
-    border-radius: 0 15px 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 -80px 0 7px;
-}
 
-
-.dish:hover .confirmation {
-    animation-name: slide-left;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    margin-left: 85px;
-    opacity: 1;
-
-}
-
-.circle {
-    background-color: #FFFFFF;
-    border-radius: 100px;
-    width: 25px;
-    height: 25px;
-    color: #99E2D0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 1S;
-}
-
-.dish:hover .circle {
-    transform: rotate(360deg);
-}
-
-.prix {
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.descriptionmenu {
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-
-}
-
-.descriptionmenu p {
-    margin: 10px 0;
-}
 
 
 
@@ -246,36 +258,37 @@ h2::after {
     height: 50px;
     border: 0px;
     cursor: pointer;
-}
 
-#order span {
-    margin: auto;
-    color: #f2f2f2;
-}
 
-#order:hover {
-    opacity: 0.8;
-    box-shadow: 2px 2px 2px;
-}
+    span {
+        margin: auto;
+        color: $color-white;
+    }
 
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 2px 2px 2px;
+    }
+}
 
 /*footer*/
 footer {
     background-color: $color-footer;
     height: 100px;
-}
 
-footer a {
-    text-decoration: none;
-    color: $color-a;
-}
 
-footer h3 {
-    font-family: 'shrikhand', Arial, Helvetica, sans-serif;
-    color: $color-a;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 10px;
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    h3 {
+        font-family: 'shrikhand', Arial, Helvetica, sans-serif;
+        color: $color-white;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
 }
 
 #contact {
@@ -284,7 +297,7 @@ footer h3 {
     padding-left: 10px;
 }
 
-@media all and (max-width:1400px) {
+@media all and (max-width:1024px) {
     #contact {
         display: flex;
         gap: 25px;
@@ -308,21 +321,23 @@ footer h3 {
         padding: 15px;
         margin: auto;
 
-    }
 
-    #logo img {
-        width: 100%;
-        object-fit: cover;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     #fleche {
         position: absolute;
         margin: 20px 12px;
         font-size: 20px;
-    }
 
-    #fleche i {
-        color: black;
+
+        i {
+            color: black;
+        }
     }
 
     #photo {
@@ -338,17 +353,19 @@ footer h3 {
         font-size: 15px;
         font-family: 'shrikhand', Arial, Helvetica, sans-serif;
         justify-content: space-between;
-    i {
-        font-size: 23px;
-        padding-right: 30px;
+
+        i {
+            font-size: 23px;
+            padding-right: 30px;
+        }
+
+        h1 {
+            margin: 0px;
+            padding: 10px;
+            font-size: 27px;
+        }
     }
 
-    h1 {
-        margin: 0px;
-        padding: 10px;
-        font-size: 27px;
-    }
-}
     /*menu*/
 
     .ligne {
@@ -358,22 +375,16 @@ footer h3 {
     }
 
     #menu {
-        background-color: $color-a;
-        border-radius: 30px 30px 0 0;
-        margin: -30px 0 0 0;
-        position: relative;
+        @include carte;
         height: 1170px;
-        padding: 0;
+
     }
 
     #menu1 {
-        background-color: $color-a;
-        border-radius: 30px 30px 0 0;
-        margin: -30px 0 0 0;
-        position: relative;
 
+        @include carte;
         height: 1270px;
-        padding: 0;
+
     }
 
     h2 {
@@ -394,17 +405,18 @@ footer h3 {
         cursor: pointer;
         gap: 10px;
 
-    }
 
-    .dish h3 {
-        font-weight: 900;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
 
-    .dish p {
-        text-overflow: ellipsis;
-        overflow: hidden;
+        h3 {
+            font-weight: 900;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
     }
 
     .descriptionmenu {
@@ -442,20 +454,23 @@ footer h3 {
 
 
         height: 180px;
-    }
 
-    footer h3,
-    footer i,
-    footer span {
-        color: #f2f2f2;
-    }
-    footer h3 {
-        padding: 0 20px;
 
-    }
 
-    footer ul {
-        list-style-type: none;
+        i,
+        span {
+            color: $color-white;
+        }
+
+        h3 {
+            padding: 0 20px;
+            color: $color-white;
+
+        }
+
+        ul {
+            list-style-type: none;
+        }
     }
 
     #contact {
@@ -464,10 +479,4 @@ footer h3 {
         gap: 10px;
     }
 
-     a span {
-        margin: auto;
-        color: #f2f2f2;
-    }
-
- }
- 
+}

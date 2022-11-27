@@ -8,6 +8,9 @@
 
 /* animation*/
 @keyframes loader {
+    0% {
+        opacity :1;
+    }
     100% {
         opacity: 0;
         display: none;
@@ -15,6 +18,10 @@
 }
 
 @keyframes spin {
+    0%
+    {
+        transform:translate(-50%,-50%)  rotate(0deg);
+    }
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }

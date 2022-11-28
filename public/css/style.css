@@ -66,6 +66,7 @@ body {
   margin: 0;
   padding: 10px;
   font-family: "roboto", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /*header*/

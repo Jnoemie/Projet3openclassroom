@@ -52,6 +52,10 @@ body {
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 h3 {
   margin: 0;
 }
@@ -181,7 +185,7 @@ h2::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 1S;
+  transition: transform 1s;
 }
 
 /*commander */

@@ -13,6 +13,16 @@
     transform: translateX(-80px);
   }
 }
+@keyframes slide-left1 {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+}
 @keyframes heart1 {
   0% {
     opacity: 1;
@@ -146,12 +156,15 @@ h2::after {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  animation-name: slide-left1;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 .dish:hover .confirmation {
   animation-name: slide-left;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  margin-left: 85px;
+  margin-left: 70px;
   opacity: 1;
 }
 .dish:hover .circle {
@@ -339,7 +352,6 @@ footer h3 {
     overflow: hidden;
   }
   .dish .prix {
-    padding-left: 15px;
     padding-top: 30px;
   }
   /*commandeer*/
